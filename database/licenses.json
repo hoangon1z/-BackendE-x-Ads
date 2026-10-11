@@ -7,5 +7,14 @@
     "maxDevices": 90,
     "devices": [],
     "status": "active"
+  },
+  "48b913a0917a06a417ccd727bd1c3a7e": {
+    "key": "48b913a0917a06a417ccd727bd1c3a7e",
+    "customerName": "hoang",
+    "createdAt": "2026-10-11T15:19:26.821Z",
+    "expiryDate": "2029-10-11T15:19:26.821Z",
+    "maxDevices": 3,
+    "devices": [],
+    "status": "active"
   }
 }

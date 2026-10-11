@@ -20,14 +20,16 @@ permissions:
 
 jobs:
   generate-license:
-    runs-on: ubuntu-latest
+    # Pin the runner so a future ubuntu-latest migration cannot change the
+    # environment underneath this workflow without review.
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '22'
       
       - name: Install Dependencies
         run: npm install
@@ -42,7 +44,7 @@ jobs:
       - name: Commit and Push
         run: |
           git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add database/licenses.json
           git commit -m "Add new license for ${{ github.event.inputs.customer_name }}"
           git push
