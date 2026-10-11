@@ -4,7 +4,7 @@
     "customerName": "11111111",
     "createdAt": "2026-10-11T15:05:00.000Z",
     "expiryDate": "9999-12-31T23:59:59.999Z",
-    "maxDevices": -1,
+    "maxDevices": 900,
     "devices": [],
     "status": "active"
   }
